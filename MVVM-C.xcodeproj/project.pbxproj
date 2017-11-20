@@ -8,18 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E241AB991CF35BF3005A2CCA /* MVVMCAuthenticateViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E241AB981CF35BF3005A2CCA /* MVVMCAuthenticateViewModelTests.swift */; };
-		E241AB9B1CF35E14005A2CCA /* MVVMCAuthenticateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296BBD11CEEEE9500420864 /* MVVMCAuthenticateModel.swift */; };
-		E241AB9C1CF35E1A005A2CCA /* AuthenticateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296BBCA1CEEE94B00420864 /* AuthenticateModel.swift */; };
-		E241AB9D1CF35E9E005A2CCA /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248101A1CF08C2D002513B0 /* ListModel.swift */; };
-		E241AB9E1CF35E9E005A2CCA /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248102D1CF11203002513B0 /* DetailModel.swift */; };
-		E241AB9F1CF35EA2005A2CCA /* MVVMCListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248101C1CF08C47002513B0 /* MVVMCListModel.swift */; };
-		E241ABA01CF35EA2005A2CCA /* MVVMCDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248102F1CF11241002513B0 /* MVVMCDetailModel.swift */; };
-		E241ABA11CF35EA9005A2CCA /* AuthenticateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296BBC81CEEE89100420864 /* AuthenticateViewModel.swift */; };
-		E241ABA21CF35EA9005A2CCA /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24810141CF08B55002513B0 /* ListViewModel.swift */; };
-		E241ABA31CF35EA9005A2CCA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24810311CF11303002513B0 /* DetailViewModel.swift */; };
-		E241ABA61CF35EAE005A2CCA /* MVVMCAuthenticateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296BBCC1CEEEA6C00420864 /* MVVMCAuthenticateViewModel.swift */; };
-		E241ABA71CF35EAE005A2CCA /* MVVMCListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24810171CF08BC1002513B0 /* MVVMCListViewModel.swift */; };
-		E241ABA81CF35EAE005A2CCA /* MVVMCDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24810331CF113A1002513B0 /* MVVMCDetailViewModel.swift */; };
 		E241ABA91CF35EB7005A2CCA /* MVVMCDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24810271CF09282002513B0 /* MVVMCDataItem.swift */; };
 		E241ABAA1CF35EC1005A2CCA /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24810231CF09223002513B0 /* DataItem.swift */; };
 		E241ABAC1CF44C84005A2CCA /* MVVMCListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E241ABAB1CF44C84005A2CCA /* MVVMCListViewModelTests.swift */; };
@@ -120,49 +108,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E24810161CF08B63002513B0 /* Protocols */ = {
+		0CB21B531FC2DE4B006B7D76 /* DetailModule */ = {
 			isa = PBXGroup;
 			children = (
-				E296BBC81CEEE89100420864 /* AuthenticateViewModel.swift */,
-				E24810141CF08B55002513B0 /* ListViewModel.swift */,
+				E248102B1CF0A31F002513B0 /* DetailCoordinator.swift */,
+				E248102D1CF11203002513B0 /* DetailModel.swift */,
 				E24810311CF11303002513B0 /* DetailViewModel.swift */,
+				E248102F1CF11241002513B0 /* MVVMCDetailModel.swift */,
+				E24810351CF1156E002513B0 /* MVVMCDetailViewController.swift */,
+				E24810331CF113A1002513B0 /* MVVMCDetailViewModel.swift */,
 			);
-			name = Protocols;
+			path = DetailModule;
 			sourceTree = "<group>";
 		};
-		E24810191CF08C1A002513B0 /* Protocols */ = {
+		0CB21B541FC2DE59006B7D76 /* ListModule */ = {
+			isa = PBXGroup;
+			children = (
+				E24810121CF08A7B002513B0 /* ListCoordinator.swift */,
+				E248101A1CF08C2D002513B0 /* ListModel.swift */,
+				E24810141CF08B55002513B0 /* ListViewModel.swift */,
+				E24810291CF094B7002513B0 /* MVVMCItemTableViewCell.swift */,
+				E248101C1CF08C47002513B0 /* MVVMCListModel.swift */,
+				E24810201CF08D34002513B0 /* MVVMCListViewController.swift */,
+				E24810171CF08BC1002513B0 /* MVVMCListViewModel.swift */,
+			);
+			path = ListModule;
+			sourceTree = "<group>";
+		};
+		0CB21B551FC2DE63006B7D76 /* AuthenticationModule */ = {
 			isa = PBXGroup;
 			children = (
 				E296BBCA1CEEE94B00420864 /* AuthenticateModel.swift */,
-				E248101A1CF08C2D002513B0 /* ListModel.swift */,
-				E248102D1CF11203002513B0 /* DetailModel.swift */,
+				E296BBC81CEEE89100420864 /* AuthenticateViewModel.swift */,
+				E296BBC11CEDA41900420864 /* AuthenticationCoordinator.swift */,
+				E296BBD11CEEEE9500420864 /* MVVMCAuthenticateModel.swift */,
+				E296BBCC1CEEEA6C00420864 /* MVVMCAuthenticateViewModel.swift */,
+				E296BBC51CEDF21400420864 /* MVVMCAuthenticationViewController.swift */,
 			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		E24810221CF09212002513B0 /* Data Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				E24810231CF09223002513B0 /* DataItem.swift */,
-			);
-			name = "Data Protocols";
-			sourceTree = "<group>";
-		};
-		E24810251CF09256002513B0 /* Data Sructs */ = {
-			isa = PBXGroup;
-			children = (
-				E24810271CF09282002513B0 /* MVVMCDataItem.swift */,
-			);
-			name = "Data Sructs";
+			path = AuthenticationModule;
 			sourceTree = "<group>";
 		};
 		E24810261CF09263002513B0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				E24810221CF09212002513B0 /* Data Protocols */,
-				E24810251CF09256002513B0 /* Data Sructs */,
+				E24810231CF09223002513B0 /* DataItem.swift */,
+				E24810271CF09282002513B0 /* MVVMCDataItem.swift */,
 			);
 			name = Data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		E25114561CED9DC100D9868B = {
@@ -186,14 +179,16 @@
 		E25114611CED9DC100D9868B /* MVVM-C */ = {
 			isa = PBXGroup;
 			children = (
+				0CB21B551FC2DE63006B7D76 /* AuthenticationModule */,
 				E296BBB71CEDA07500420864 /* Coordinators */,
-				E296BBB81CEDA07500420864 /* Models */,
-				E296BBB91CEDA07500420864 /* ViewModels */,
-				E296BBBA1CEDA07500420864 /* Views */,
+				E24810261CF09263002513B0 /* Data */,
+				0CB21B531FC2DE4B006B7D76 /* DetailModule */,
+				0CB21B541FC2DE59006B7D76 /* ListModule */,
+				E296BBBA1CEDA07500420864 /* Storyboard */,
 				E25114621CED9DC100D9868B /* AppDelegate.swift */,
 				E25114691CED9DC100D9868B /* Assets.xcassets */,
-				E251146B1CED9DC100D9868B /* LaunchScreen.storyboard */,
 				E251146E1CED9DC100D9868B /* Info.plist */,
+				E251146B1CED9DC100D9868B /* LaunchScreen.storyboard */,
 				E296BBCE1CEEEC9F00420864 /* Localizable.strings */,
 			);
 			path = "MVVM-C";
@@ -213,48 +208,18 @@
 		E296BBB71CEDA07500420864 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				E296BBBD1CEDA0C500420864 /* Coordinator.swift */,
 				E296BBBB1CEDA08B00420864 /* AppCoordinator.swift */,
-				E296BBC11CEDA41900420864 /* AuthenticationCoordinator.swift */,
-				E24810121CF08A7B002513B0 /* ListCoordinator.swift */,
-				E248102B1CF0A31F002513B0 /* DetailCoordinator.swift */,
+				E296BBBD1CEDA0C500420864 /* Coordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		E296BBB81CEDA07500420864 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E24810261CF09263002513B0 /* Data */,
-				E24810191CF08C1A002513B0 /* Protocols */,
-				E296BBD11CEEEE9500420864 /* MVVMCAuthenticateModel.swift */,
-				E248101C1CF08C47002513B0 /* MVVMCListModel.swift */,
-				E248102F1CF11241002513B0 /* MVVMCDetailModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		E296BBB91CEDA07500420864 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				E24810161CF08B63002513B0 /* Protocols */,
-				E296BBCC1CEEEA6C00420864 /* MVVMCAuthenticateViewModel.swift */,
-				E24810171CF08BC1002513B0 /* MVVMCListViewModel.swift */,
-				E24810331CF113A1002513B0 /* MVVMCDetailViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		E296BBBA1CEDA07500420864 /* Views */ = {
+		E296BBBA1CEDA07500420864 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				E296BBBF1CEDA30100420864 /* MVVM-C.storyboard */,
-				E296BBC51CEDF21400420864 /* MVVMCAuthenticationViewController.swift */,
-				E24810201CF08D34002513B0 /* MVVMCListViewController.swift */,
-				E24810291CF094B7002513B0 /* MVVMCItemTableViewCell.swift */,
-				E24810351CF1156E002513B0 /* MVVMCDetailViewController.swift */,
 			);
-			path = Views;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,23 +359,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E241ABA81CF35EAE005A2CCA /* MVVMCDetailViewModel.swift in Sources */,
-				E241ABA71CF35EAE005A2CCA /* MVVMCListViewModel.swift in Sources */,
-				E241ABA21CF35EA9005A2CCA /* ListViewModel.swift in Sources */,
-				E241ABA61CF35EAE005A2CCA /* MVVMCAuthenticateViewModel.swift in Sources */,
-				E241AB9E1CF35E9E005A2CCA /* DetailModel.swift in Sources */,
 				E241ABAE1CF45D44005A2CCA /* MVVMDetailViewModelTests.swift in Sources */,
-				E241AB9B1CF35E14005A2CCA /* MVVMCAuthenticateModel.swift in Sources */,
-				E241AB9C1CF35E1A005A2CCA /* AuthenticateModel.swift in Sources */,
 				E241AB991CF35BF3005A2CCA /* MVVMCAuthenticateViewModelTests.swift in Sources */,
 				E241ABA91CF35EB7005A2CCA /* MVVMCDataItem.swift in Sources */,
-				E241AB9F1CF35EA2005A2CCA /* MVVMCListModel.swift in Sources */,
 				E241ABAA1CF35EC1005A2CCA /* DataItem.swift in Sources */,
-				E241ABA01CF35EA2005A2CCA /* MVVMCDetailModel.swift in Sources */,
 				E241ABAC1CF44C84005A2CCA /* MVVMCListViewModelTests.swift in Sources */,
-				E241ABA11CF35EA9005A2CCA /* AuthenticateViewModel.swift in Sources */,
-				E241ABA31CF35EA9005A2CCA /* DetailViewModel.swift in Sources */,
-				E241AB9D1CF35E9E005A2CCA /* ListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +384,7 @@
 				E251146C1CED9DC100D9868B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		E296BBCE1CEEEC9F00420864 /* Localizable.strings */ = {
@@ -439,6 +393,7 @@
 				E296BBCF1CEEEC9F00420864 /* Base */,
 			);
 			name = Localizable.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
